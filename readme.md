@@ -77,9 +77,11 @@ This section consists of write-ups in choronological order, organised by sub-sec
     - https://github.com/Corona-Studio/ProjBobcat
 
 
-## References / To-read
+## References / Todo 👷‍♂️
 - [A wiki site that reverse engineer minecraft](https://wiki.vg/Main_Page)
 - [Article explaining about unpixelize text from image](https://www.linkedin.com/pulse/recovering-passwords-from-pixelized-screenshots-sipke-mellema/)
-- $HOME/Downloads/Games/Minecraft/ATLauncher
-    - https://github.com/ATLauncher/ATLauncher
+- [ ] Playaround with the [fabric example mode](https://github.com/FabricMC/fabric-example-mod/tree/1.18)
+- [ ] Find out where to add the `ATLauncher.bat` changes so that it is added into the source control and automatically built into the dist package.
+- [ ] Figure out the unknown behavior of different build output when `-x test` is included to gradle build command.
+- [ ] Finish the latest LiveOverflow video of [Minecraft Hacker VS Herobrine](https://youtu.be/Hmmr1oLt-V8?t=604)
 
