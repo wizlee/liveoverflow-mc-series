@@ -1,0 +1,3 @@
+[submodule "ATLauncher-offline"]
+	path = ATLauncher-offline
+	url = https://github.com/wizlee/ATLauncher-offline
