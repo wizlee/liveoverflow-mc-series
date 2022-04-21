@@ -1,6 +1,8 @@
 # Overview
 
-This project intends to host all the work in following [LiveOverflow's Minecraft Hacking Youtube series](https://www.youtube.com/watch?v=Ekcseve-mOg).
+A repo to record learnings along side LiveOverflow's Minecraft Hacking Youtube Series
+- [Series Playlist](https://www.youtube.com/playlist?list=PLhixgUqwRTjwvBI-hmbZ2rpkAl4lutnJG)
+- [Series Intro Video](https://www.youtube.com/watch?v=Ekcseve-mOg)
 
 # History
 
