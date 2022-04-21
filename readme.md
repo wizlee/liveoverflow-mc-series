@@ -45,11 +45,36 @@ This section consists of write-ups in choronological order, organised by sub-sec
         - to remove any references to account in `replaceArgument()`
         - to comment out any use of account in `censorArguments()`
     - run `gradlew.bat build -x test` to build the source but skip UT
-- Unzip build/distribution/ATLauncher-x.x.x.zip into a folder of your choice
-- %USERPROFILE%\Downloads\Games\Minecraft\launcher\ATLauncher-mod\bin
+- Unzip lib/ folder in build/distribution/ATLauncher-x.x.x.zip into a folder of your choice
+    - %USERPROFILE%\Downloads\Games\Minecraft\launcher\ATLauncher-mod\lib
+    - This folder act as the release for ATLauncher
+- TODO:
+    - All modifications are now source control except for the changes in `ATLauncher.bat`
+    - The following is added into the bat file so that the files downloaded are nicely put into a folder called data/
+        ```batch
+        @rem ...
+        if exist %APP_HOME%\data\ (
+        echo %APP_HOME%\data\ exist
+        ) else (
+        mkdir %APP_HOME%\data\
+        )
+        cd %APP_HOME%\data\
+        @rem ...
+        ```
 
-### Alternative to 
+### Alternative to launching offline MC
 - By watching [this LiveOverflow video](https://www.youtube.com/watch?v=Hmmr1oLt-V8), it seems like offline MC can also be easily launched by using [the Fabric example Mod](https://github.com/FabricMC/fabric-example-mod/tree/1.18).
+- Reorganise this readme to be in a new repo that will be consisted of other projects in the form of git submodules. This allows:
+    - version control each project individually, while working on all of them in a unified place
+    - putting this readme as a parent readme to all the projects. This is important as this readme records all the writeups in this journey 🚗.
+- Encountered an unexpected error when trying to build ATLauncher from the git submodule folder
+    - It appeared that the build output in the distribution folder will be different if `-x test` is added to the `gradlew.bat build` command.
+- Stashing the reference links of all the tools that originally thought of needing to download for launching offline MC
+    - https://www.minecraft.net/en-us/download
+    - https://www.minecraft.net/en-us/download/server
+    - https://github.com/QPCrummer/TaterLauncher/commits/dev?before=a2be09b74fb1863da85c228ad13a58e933aef828+35&branch=dev
+    - https://github.com/search?o=desc&p=2&q=minecraft+launcher&s=updated&type=Repositories
+    - https://github.com/Corona-Studio/ProjBobcat
 
 
 ## References / To-read
