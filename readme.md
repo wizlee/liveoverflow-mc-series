@@ -76,12 +76,23 @@ This section consists of write-ups in choronological order, organised by sub-sec
     - https://github.com/search?o=desc&p=2&q=minecraft+launcher&s=updated&type=Repositories
     - https://github.com/Corona-Studio/ProjBobcat
 
+### Disable auto update for launcher
+- Now chose to disable in source code
+- There's a App Argument available to disable launcher auto update -> `no-launcher-update`.
+    - However didn't out effort into finding where to put use that argument
+    - And, wanting to understand more about the codebase
+- Think kinda figured out why the unknown behavior of different build output when `-x test` is included to gradle build command.
+    - This is because without `-x test`, the build is incomplete and failed due to failing UT. This means that the output in `build/distribution/` are actually only the intermediate output.
+    - The actual output is in `dist\`. Which will be built when running with `-x test` to skip unit test.
+
 
 ## References / Todo 👷‍♂️
 - [A wiki site that reverse engineer minecraft](https://wiki.vg/Main_Page)
 - [Article explaining about unpixelize text from image](https://www.linkedin.com/pulse/recovering-passwords-from-pixelized-screenshots-sipke-mellema/)
+- [x] Figure out the unknown behavior of different build output when `-x test` is included to gradle build command.
+- [x] Finish the latest LiveOverflow video of [Minecraft Hacker VS Herobrine](https://youtu.be/Hmmr1oLt-V8?t=604)
+- [ ] Figure out why UT fails.
+- [ ] Read about Mixins using [SpongePowered Mixins wiki](https://github.com/SpongePowered/Mixin/wiki).
 - [ ] Playaround with the [fabric example mode](https://github.com/FabricMC/fabric-example-mod/tree/1.18)
 - [ ] Find out where to add the `ATLauncher.bat` changes so that it is added into the source control and automatically built into the dist package.
-- [ ] Figure out the unknown behavior of different build output when `-x test` is included to gradle build command.
-- [ ] Finish the latest LiveOverflow video of [Minecraft Hacker VS Herobrine](https://youtu.be/Hmmr1oLt-V8?t=604)
 
